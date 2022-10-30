@@ -45,11 +45,10 @@
   color: var(--primary-white-color);
   margin-bottom: 9px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.address:focus,
-.address:hover {
-  color: var(--accent-color);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
 }
 
 .footer-mail,
@@ -60,16 +59,10 @@
   letter-spacing: 0.03em;
   color: var(--footer-mail);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-mail:focus,
-.footer-mail:hover {
-  color: var(--accent-color);
-}
-
-.footer-tel:focus,
-.footer-tel:hover {
-  color: var(--accent-color);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
 }
 
 .footer-text {
@@ -98,11 +91,10 @@
   justify-content: center;
   align-items: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.footer-network:hover,
-.footer-network:focus {
-  background-color: var(--accent-color);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 
 .footer-icon {
@@ -163,11 +155,10 @@
   justify-content: center;
   gap: 10px;
   font-weight: 700;
-}
-
-.footer-subscription-button:hover,
-.footer-subscription-button:focus {
-  background-color: var(--background-hero-button);
+  &:hover,
+  &:focus {
+    background-color: var(--background-hero-button);
+  }
 }
 
 .footer-button-icon {

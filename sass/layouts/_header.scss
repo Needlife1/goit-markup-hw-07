@@ -42,11 +42,10 @@
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-link:hover,
-.header-link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .header-link::after {
@@ -88,16 +87,10 @@
   display: flex;
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-mail:focus,
-.header-mail:hover {
-  color: var(--accent-color);
-}
-
-.header-tel:focus,
-.header-tel:hover {
-  color: var(--accent-color);
+  &:focus,
+  &:hover {
+    color: var(--accent-color);
+  }
 }
 
 .header-icon {

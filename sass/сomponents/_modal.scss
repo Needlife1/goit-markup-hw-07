@@ -21,10 +21,9 @@
   padding: 40px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0);
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
 }
 
 .modal-button {
@@ -44,17 +43,16 @@
 
 .modal-close-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    stroke: var(--accent-color);
+    fill: var(--accent-color);
+  }
 }
 
 /* Меняет цвет svg при hover и focus */
 .modal-close-icon svg:hover,
 .modal-close-icon svg:focus {
-  stroke: var(--accent-color);
-  fill: var(--accent-color);
-}
-
-.modal-close-icon:hover,
-.modal-close-icon:focus {
   stroke: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -86,7 +84,7 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  cursor: pointer;
+  text-align: start;
 }
 
 .form-field input {
@@ -244,10 +242,9 @@ textarea::placeholder {
   color: var(--primary-white-color);
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.backdrop-button:hover,
-.backdrop-button:focus {
-  background: var(--background-hero-button);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  &:hover,
+  &:focus {
+    background: var(--background-hero-button);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
 }
