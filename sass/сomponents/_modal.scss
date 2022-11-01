@@ -1,4 +1,4 @@
-.backdrop {
+.modal {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -8,7 +8,7 @@
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal {
+.modal__box {
   width: 528px;
   height: 581px;
   background-color: var(--primary-white-color);
@@ -26,7 +26,7 @@
   }
 }
 
-.modal-button {
+.modal__button {
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -41,7 +41,7 @@
   padding: 0;
 }
 
-.modal-close-icon {
+.modal__close-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &:hover,
   &:focus {
@@ -51,8 +51,8 @@
 }
 
 /* Меняет цвет svg при hover и focus */
-.modal-close-icon svg:hover,
-.modal-close-icon svg:focus {
+.modal__close-icon svg:hover,
+.modal__close-icon svg:focus {
   stroke: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -67,7 +67,7 @@
   /* Избегает попадания случайным кликом */
 }
 
-.backdrop-text {
+.modal__text {
   margin-bottom: 12px;
   font-family: 'Roboto';
   font-style: normal;
@@ -79,7 +79,7 @@
   color: var(--primary-text-color);
 }
 
-.form-field {
+.form__field {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -87,7 +87,7 @@
   text-align: start;
 }
 
-.form-field input {
+.form__field input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   height: 40px;
@@ -96,7 +96,7 @@
   outline-color: var(--accent-color);
 }
 
-.form-field label {
+.form__field label {
   margin-bottom: 4px;
   color: var(--text-color);
   font-family: 'Roboto';
@@ -107,7 +107,7 @@
   letter-spacing: 0.01em;
 }
 
-.form-icon {
+.form__icon {
   position: absolute;
   bottom: 50%;
   left: 12px;
@@ -115,17 +115,17 @@
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field:focus-within .input,
-.form-field:hover .input {
+.form__field:focus-within .input,
+.form__field:hover .input {
   border: 1px solid var(--accent-color);
 }
 
-.form-field:focus-within .form-icon,
-.form-field:hover .form-icon {
+.form__field:focus-within .form__icon,
+.form__field:hover .form__icon {
   fill: var(--accent-color);
 }
 
-.form-textarea {
+.form__textarea {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -133,7 +133,7 @@
   cursor: pointer;
 }
 
-.textarea-label {
+.form__textarea-label {
   margin-bottom: 4px;
   color: var(--text-color);
   font-family: 'Roboto';
@@ -144,7 +144,7 @@
   letter-spacing: 0.01em;
 }
 
-.backdrop-textarea {
+.form__backdrop-textarea {
   resize: none;
   cursor: pointer;
   outline-color: var(--accent-color);
@@ -152,7 +152,7 @@
   padding: 12px 16px;
 }
 
-.form-textarea textarea {
+.form__textarea textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
@@ -167,14 +167,14 @@ textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.checkbox-backdrop {
+.form__checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.input-checbox {
+.form__input-checbox {
   /* Сбрасывает все оформление от браузера  */
   appearance: none;
   position: absolute;
@@ -183,7 +183,7 @@ textarea::placeholder {
 /* Если .input выбран(:checked) то пусть его сосед 
 .checkbox-text а точнее его ::before будет выполнять
 заданые дйствия */
-.input-checbox:checked + .checkbox-text::before {
+.form__input-checbox:checked + .form__checkbox-text::before {
   background-color: var(--accent-color);
   background-image: url(../images/icon\ check.svg);
   background-position: center;
@@ -191,7 +191,7 @@ textarea::placeholder {
   border-color: transparent;
 }
 
-.checkbox-text {
+.form__checkbox-text {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -204,7 +204,7 @@ textarea::placeholder {
   align-items: center;
 }
 
-.checkbox-text::before {
+.form__checkbox-text::before {
   content: '';
   width: 16px;
   height: 15px;
@@ -213,7 +213,7 @@ textarea::placeholder {
   margin-right: 8px;
 }
 
-.checkbox-link {
+.form__checkbox-link {
   font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
@@ -224,7 +224,7 @@ textarea::placeholder {
   margin-left: 4px;
 }
 
-.backdrop-button {
+.form__backdrop-button {
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;

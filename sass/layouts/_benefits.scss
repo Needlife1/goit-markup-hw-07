@@ -3,7 +3,7 @@
   padding-bottom: 94px;
 }
 
-.visually-hidden {
+.visually__hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -16,7 +16,7 @@
   margin: -1px;
 }
 
-.benefits-icon-box {
+.benefits__icon-box {
   width: 270px;
   height: 120px;
   background: var(--bg-button);
@@ -27,12 +27,12 @@
   margin-bottom: 30px;
 }
 
-.benefits-list {
+.benefits__list {
   display: flex;
   gap: 30px;
 }
 
-.benefits-titel {
+.benefits__titel {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -42,7 +42,7 @@
   color: var(--primary-text-color);
 }
 
-.benefits-text {
+.benefits__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;

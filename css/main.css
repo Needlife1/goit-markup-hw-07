@@ -40,14 +40,14 @@ body {
   letter-spacing: 0.03em;
 }
 
+a {
+  text-decoration: none;
+}
+
 .list {
   list-style: none;
   margin: 0;
   padding-left: 0;
-}
-
-.link {
-  text-decoration: none;
 }
 
 .container {
@@ -60,17 +60,17 @@ body {
   border-bottom: 1px solid #ececec;
 }
 
-.header-container {
+.header__container {
   display: flex;
   align-items: center;
 }
 
-.header-navigation {
+.navigation {
   display: flex;
   align-items: center;
 }
 
-.header-logo {
+.navigation__logo {
   font-family: "Raleway";
   font-weight: 700;
   font-size: 26px;
@@ -82,16 +82,16 @@ body {
   margin-right: 93px;
 }
 
-.logo {
+.logo__part--darck {
   color: var(--black-color);
 }
 
-.header-list {
+.menu {
   display: flex;
   gap: 50px;
 }
 
-.header-link {
+.menu__link {
   padding: 32px 0;
   display: block;
   font-weight: 500;
@@ -101,11 +101,11 @@ body {
   color: var(--primary-text-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-link:hover, .header-link:focus {
+.menu__link:hover, .menu__link:focus {
   color: var(--accent-color);
 }
 
-.header-link::after {
+.menu__link::after {
   background: #2196f3;
   border-radius: 2px;
 }
@@ -128,14 +128,14 @@ body {
   width: 100%;
 }
 
-.list-contacts {
+.contacts {
   display: flex;
   margin-left: auto;
   gap: 50px;
 }
 
-.header-mail,
-.header-tel {
+.contacts__mail,
+.contacts__tel {
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -145,13 +145,13 @@ body {
   align-items: center;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.header-mail:focus, .header-mail:hover,
-.header-tel:focus,
-.header-tel:hover {
+.contacts__mail:focus, .contacts__mail:hover,
+.contacts__tel:focus,
+.contacts__tel:hover {
   color: var(--accent-color);
 }
 
-.header-icon {
+.contacts__icon {
   margin-right: 10px;
   fill: currentColor;
 }
@@ -169,7 +169,7 @@ body {
   margin: 0 auto;
 }
 
-.hero-titel {
+.hero__titel {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -183,7 +183,7 @@ body {
   margin: 0 auto;
 }
 
-.hero-button {
+.hero__button {
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
@@ -202,7 +202,7 @@ body {
   margin-top: 30px;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.hero-button:hover, .hero-button:focus {
+.hero__button:hover, .hero__button:focus {
   background-color: var(--background-hero-button);
 }
 
@@ -211,7 +211,7 @@ body {
   padding-bottom: 94px;
 }
 
-.visually-hidden {
+.visually__hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -225,7 +225,7 @@ body {
   margin: -1px;
 }
 
-.benefits-icon-box {
+.benefits__icon-box {
   width: 270px;
   height: 120px;
   background: var(--bg-button);
@@ -236,12 +236,12 @@ body {
   margin-bottom: 30px;
 }
 
-.benefits-list {
+.benefits__list {
   display: flex;
   gap: 30px;
 }
 
-.benefits-titel {
+.benefits__titel {
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -251,7 +251,7 @@ body {
   color: var(--primary-text-color);
 }
 
-.benefits-text {
+.benefits__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -304,12 +304,7 @@ body {
   padding-top: 94px;
 }
 
-.team-list {
-  display: flex;
-  gap: 30px;
-}
-
-.team-titel {
+.team__titel {
   font-weight: 700;
   font-size: 36px;
   line-height: 1.16;
@@ -319,18 +314,23 @@ body {
   margin-bottom: 50px;
 }
 
-.team-item {
+.cards {
+  display: flex;
+  gap: 30px;
+}
+
+.cards__item {
   width: calc(100% - 90px)/4;
   background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-info {
+.cards__info {
   padding: 30px 0;
 }
 
-.team-name {
+.cards__name {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
@@ -340,7 +340,7 @@ body {
   margin-bottom: 10px;
 }
 
-.team-text {
+.cards__text {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.18;
@@ -349,14 +349,14 @@ body {
   color: var(--text-color);
 }
 
-.team-network {
+.cocials {
   display: flex;
   justify-content: center;
   margin-top: 16px;
   gap: 10px;
 }
 
-.network {
+.cocials__network {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -366,12 +366,12 @@ body {
   color: var(--border-color);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.network:focus, .network:hover {
+.cocials__network:focus, .cocials__network:hover {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
 }
 
-.soc-icon {
+.cocials__icon {
   fill: currentColor;
 }
 
@@ -422,16 +422,16 @@ body {
   padding: 60px 0;
 }
 
-.footer-container {
+.connection__container {
   display: flex;
   align-items: baseline;
 }
 
-.footer-address-box {
+.connection {
   margin-right: 70px;
 }
 
-.footer-logo {
+.connection__logo {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
@@ -439,21 +439,24 @@ body {
   line-height: 31px;
   letter-spacing: 0.03em;
   color: var(--accent-color);
+}
+
+.logo {
   margin-top: 60;
   margin-bottom: 20;
 }
 
-.logo-footer {
+.logo-part--white {
   color: var(--primary-white-color);
 }
 
-.footer-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-
-.footer-address {
+.compound {
   font-style: normal;
   margin-top: 20px;
+}
+
+.compound__item:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .address {
@@ -469,8 +472,8 @@ body {
   color: var(--accent-color);
 }
 
-.footer-mail,
-.footer-tel {
+.compound__mail,
+.compound__tel {
   font-weight: 400;
   font-size: normal;
   line-height: 1.71;
@@ -478,13 +481,13 @@ body {
   color: var(--footer-mail);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-mail:focus, .footer-mail:hover,
-.footer-tel:focus,
-.footer-tel:hover {
+.compound__mail:focus, .compound__mail:hover,
+.compound__tel:focus,
+.compound__tel:hover {
   color: var(--accent-color);
 }
 
-.footer-text {
+.social-networks__text {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -495,13 +498,13 @@ body {
   color: var(--primary-white-color);
 }
 
-.footer-network-list {
+.social-networks__list {
   display: flex;
   margin-top: 20px;
   gap: 10px;
 }
 
-.footer-network {
+.social-networks__network {
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -511,19 +514,19 @@ body {
   align-items: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer-network:hover, .footer-network:focus {
+.social-networks__network:hover, .social-networks__network:focus {
   background-color: var(--accent-color);
 }
 
-.footer-icon {
+.social-networks__icon {
   fill: var(--primary-white-color);
 }
 
-.footer-subscription-box {
+.subscription__box {
   margin-left: auto;
 }
 
-.footer-subscription-text {
+.subscription__text {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -535,14 +538,14 @@ body {
   margin-bottom: 20px;
 }
 
-.footer-subscription {
+.subscription {
   display: flex;
   gap: 12px;
   align-items: center;
   justify-content: center;
 }
 
-.footer-form {
+.subscription__form {
   box-sizing: border-box;
   width: 358px;
   height: 50px;
@@ -556,7 +559,7 @@ body {
   color: var(--primary-white-color);
 }
 
-.footer-subscription-button {
+.subscription__button {
   padding: 10px 28px;
   background: var(--accent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -574,11 +577,11 @@ body {
   gap: 10px;
   font-weight: 700;
 }
-.footer-subscription-button:hover, .footer-subscription-button:focus {
+.subscription__button:hover, .subscription__button:focus {
   background-color: var(--background-hero-button);
 }
 
-.footer-button-icon {
+.subscription__button-icon {
   fill: var(--primary-white-color);
 }
 
@@ -682,7 +685,7 @@ body {
   margin-top: 4px;
 }
 
-.backdrop {
+.modal {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -691,7 +694,7 @@ body {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal {
+.modal__box {
   width: 528px;
   height: 581px;
   background-color: var(--primary-white-color);
@@ -704,11 +707,11 @@ body {
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop.is-hidden .modal {
+.backdrop.is-hidden .modal__box {
   transform: translate(-50%, -50%) scale(0);
 }
 
-.modal-button {
+.modal__button {
   width: 30px;
   height: 30px;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -723,17 +726,17 @@ body {
   padding: 0;
 }
 
-.modal-close-icon {
+.modal__close-icon {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), stroke 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close-icon:hover, .modal-close-icon:focus {
+.modal__close-icon:hover, .modal__close-icon:focus {
   stroke: var(--accent-color);
   fill: var(--accent-color);
 }
 
 /* Меняет цвет svg при hover и focus */
-.modal-close-icon svg:hover,
-.modal-close-icon svg:focus {
+.modal__close-icon svg:hover,
+.modal__close-icon svg:focus {
   stroke: var(--accent-color);
   fill: var(--accent-color);
 }
@@ -748,7 +751,7 @@ body {
   /* Избегает попадания случайным кликом */
 }
 
-.backdrop-text {
+.modal__text {
   margin-bottom: 12px;
   font-family: "Roboto";
   font-style: normal;
@@ -760,7 +763,7 @@ body {
   color: var(--primary-text-color);
 }
 
-.form-field {
+.form__field {
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -768,7 +771,7 @@ body {
   text-align: start;
 }
 
-.form-field input {
+.form__field input {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   height: 40px;
@@ -777,7 +780,7 @@ body {
   outline-color: var(--accent-color);
 }
 
-.form-field label {
+.form__field label {
   margin-bottom: 4px;
   color: var(--text-color);
   font-family: "Roboto";
@@ -788,7 +791,7 @@ body {
   letter-spacing: 0.01em;
 }
 
-.form-icon {
+.form__icon {
   position: absolute;
   bottom: 50%;
   left: 12px;
@@ -796,17 +799,17 @@ body {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-field:focus-within .input,
-.form-field:hover .input {
+.form__field:focus-within .input,
+.form__field:hover .input {
   border: 1px solid var(--accent-color);
 }
 
-.form-field:focus-within .form-icon,
-.form-field:hover .form-icon {
+.form__field:focus-within .form__icon,
+.form__field:hover .form__icon {
   fill: var(--accent-color);
 }
 
-.form-textarea {
+.form__textarea {
   margin-bottom: 20px;
   display: flex;
   flex-direction: column;
@@ -814,7 +817,7 @@ body {
   cursor: pointer;
 }
 
-.textarea-label {
+.form__textarea-label {
   margin-bottom: 4px;
   color: var(--text-color);
   font-family: "Roboto";
@@ -825,7 +828,7 @@ body {
   letter-spacing: 0.01em;
 }
 
-.backdrop-textarea {
+.form__backdrop-textarea {
   resize: none;
   cursor: pointer;
   outline-color: var(--accent-color);
@@ -833,7 +836,7 @@ body {
   padding: 12px 16px;
 }
 
-.form-textarea textarea {
+.form__textarea textarea {
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 }
@@ -868,14 +871,14 @@ textarea::placeholder {
   color: rgba(117, 117, 117, 0.5);
 }
 
-.checkbox-backdrop {
+.form__checkbox {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
 }
 
-.input-checbox {
+.form__input-checbox {
   /* Сбрасывает все оформление от браузера  */
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -886,7 +889,7 @@ textarea::placeholder {
 /* Если .input выбран(:checked) то пусть его сосед 
 .checkbox-text а точнее его ::before будет выполнять
 заданые дйствия */
-.input-checbox:checked + .checkbox-text::before {
+.form__input-checbox:checked + .form__checkbox-text::before {
   background-color: var(--accent-color);
   background-image: url(../images/icon\ check.svg);
   background-position: center;
@@ -894,7 +897,7 @@ textarea::placeholder {
   border-color: transparent;
 }
 
-.checkbox-text {
+.form__checkbox-text {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -907,7 +910,7 @@ textarea::placeholder {
   align-items: center;
 }
 
-.checkbox-text::before {
+.form__checkbox-text::before {
   content: "";
   width: 16px;
   height: 15px;
@@ -916,7 +919,7 @@ textarea::placeholder {
   margin-right: 8px;
 }
 
-.checkbox-link {
+.form__checkbox-link {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -927,7 +930,7 @@ textarea::placeholder {
   margin-left: 4px;
 }
 
-.backdrop-button {
+.form__backdrop-button {
   background: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
@@ -946,7 +949,7 @@ textarea::placeholder {
   margin: 0 auto;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop-button:hover, .backdrop-button:focus {
+.form__backdrop-button:hover, .form__backdrop-button:focus {
   background: var(--background-hero-button);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }/*# sourceMappingURL=main.css.map */
