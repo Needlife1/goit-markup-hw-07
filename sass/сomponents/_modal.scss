@@ -94,6 +94,7 @@
   cursor: pointer;
   padding-left: 42px;
   outline-color: var(--accent-color);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form__field label {
